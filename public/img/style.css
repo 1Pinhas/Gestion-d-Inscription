@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+#main {
+    padding: 20px;
+}
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.image{
+    display: flex;
+    width: 40%;
+    
+}
+
+.image1{
+    width: 100px;
+    height: 70px;
+
+}
+
+.image2{
+    width: 90px;
+    height: 120px;
+    
+}
+
+.image3{
+    width: 5%;
+    height: auto;
+    
+}
+
+.image4{
+    width: 5%;
+    height: auto;
+    background-color: white;
+}

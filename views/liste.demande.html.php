@@ -4,8 +4,8 @@
                 <fieldset>
                     <legend>Mes Demandes</legend>
                     <form class="bloc4" action="<?=WEBROOT?>" method="post">
-                        <label for="Etat" class="etat">Etat: </label>
-                        <select>
+                        <label for="etat" class="etat">Etat: </label>
+                        <select name="etat">
                             <option value="All">All</option>
                             <option value="Encours">Encours</option>
                             <option value="Accepter">Accepter</option>
@@ -29,7 +29,7 @@
                                     <td><?=$value['date']?></td>
                                     <td><?=$value['type']?></td>
                                     <td><?=$value['etat']?></td>
-                                    <td><a href="detailsdemande.html">Details de la demande</a></td>
+                                    <td><a href="#">Details de la demande</a></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>

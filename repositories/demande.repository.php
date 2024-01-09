@@ -1,20 +1,4 @@
 <?php
-   //definir un tableau de 5  demandes
-     //une demande est caracterise
-        //numero, chaine genere aleatoirement
-         //date 
-         //Etat(Encours,Accepte,Refuse)
-         //Type (Suspension ou Annulation)
-         //motif
-         //etudiant (matricule,nom,prenom,
-                //dateNaiss(Date php),
-                //classe(filiere,niveau,code))
-
-// fonction qui retourne le tableau de demande
-// fonction qui retourne le tableau de demande par type
-// fonction qui retourne le tableau de demande par etat
-
-
    $demande = [
       ["numero" => random_int(0,1000),
          "date" => "d/m/Y H:i",
@@ -169,47 +153,7 @@ function getAllAnnees():array{
 }
 
 function getAllDemande():array{
-   return[
-      [
-         "id" => 4,
-         "type" =>"suspension",
-         "date"=>"01/01/2023",
-         "motif" => "oij oi hiuhudtyuyg",
-         "etudiant_id" => 1,
-         "annee_id" => 1,
-         "etat" => "Encours"
-      ],
-
-      [
-         "id" => 1,
-         "type" =>"Annulation",
-         "date"=>"10/06/2023",
-         "motif" => "oij oi hiuhudtyuyg",
-         "etudiant_id" => 2,
-         "annee_id" => 1,
-         "etat" => "Encours"
-      ],
-
-      [
-         "id" => 2,
-         "type" =>"suspension",
-         "date"=>"12/08/2023",
-         "motif" => "oij oi hiuhudtyuyg",
-         "etudiant_id" => 3,
-         "annee_id" => 1,
-         "etat" => "Accepter"
-      ],
-
-      [
-         "id" => 3,
-         "type" =>"Annulation",
-         "date"=>"12/12/2023",
-         "motif" => "oij oi hiuhudtyuyg",
-         "etudiant_id" => 1,
-         "annee_id" => 1,
-         "etat" => "Rejeter"
-      ]
-   ];
+   return fromJsonToArray("demandes");
 }
 
 function connexion(string $login, string $password) : array|null {
@@ -232,33 +176,27 @@ function getAnneeEncours(): array|null{
    return null;
 }
 
-function getDemandeByEtudiantAndAnneeEncours(int $etudiantId, int $anneeId):array|null{
+function getDemandeByEtudiantAndAnneeEncours(int $etudiantId, int $anneeId, $etat="All"):array|null{
    $demandes=getAllDemande();
    $demandeEtu=[];
    foreach ($demandes as $value) {
-      if ($value['etudiant_id']==$etudiantId && $value['annee_id']== $anneeId) {
-         $demandeEtu[]= $value;
+      if ($etat=="All") {
+         if ($value['etudiant_id']==$etudiantId && $value['annee_id']== $anneeId) {
+            $demandeEtu[]= $value;
+         }
+      }else {
+         if ($value['etudiant_id']==$etudiantId && $value['annee_id']== $anneeId && $value['etat']== $etat) {
+            $demandeEtu[]= $value;
+         }
       }
+         
    }
    return $demandeEtu;
 }
 
-   // function afficher(array $demande, string $type="all",string $etat="all"):array{
-   //  $tab=[];
-   //    foreach ($demande as  $value) {
-   //       if ($value["type"]==$type ||  $value["etat"]==$etat) {
-   //          $demande[]=$value;
-   //       }
-   //    }
-   // };
-   /*
+function addDemande(array $demande): void{
+   fromArrayToJson("demandes",  $demande);
+}
 
-   /*
-   function retourneTableauDemande(array $tabDemande): array {
-      foreach ($tabDemande as $value) {
-         # code...
-      }
 
-   }
-   */
 ?>

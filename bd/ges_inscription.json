@@ -1,0 +1,90 @@
+{
+    "demandes": [
+        {
+            "id": 4,
+            "type": "suspension",
+            "date": "01\/01\/2023",
+            "motif": "oij oi hiuhudtyuyg",
+            "etudiant_id": 1,
+            "annee_id": 1,
+            "etat": "Encours"
+        },
+        {
+            "id": 1,
+            "type": "Annulation",
+            "date": "10\/06\/2023",
+            "motif": "oij oi hiuhudtyuyg",
+            "etudiant_id": 2,
+            "annee_id": 1,
+            "etat": "Encours"
+        },
+        {
+            "id": 2,
+            "type": "suspension",
+            "date": "12\/08\/2023",
+            "motif": "oij oi hiuhudtyuyg",
+            "etudiant_id": 3,
+            "annee_id": 1,
+            "etat": "Accepter"
+        },
+        {
+            "id": 3,
+            "type": "Annulation",
+            "date": "12\/12\/2023",
+            "motif": "oij oi hiuhudtyuyg",
+            "etudiant_id": 1,
+            "annee_id": 1,
+            "etat": "Rejeter"
+        },
+        {
+            "id": 4,
+            "type": "Annulation",
+            "date": "01\/01\/2023",
+            "motif": "ggggggggggggggggg",
+            "etudiant_id": 1,
+            "annee_id": 1,
+            "etat": "Encours"
+        },
+        {
+            "id": 4,
+            "type": "Suspension",
+            "date": "01\/01\/2023",
+            "motif": "vxbcnn",
+            "etudiant_id": 1,
+            "annee_id": 1,
+            "etat": "Accepter"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "matricule": "MAT001",
+            "nom": "ADAMA",
+            "prenom": "cheikh",
+            "login": "etudiant@gmail.com",
+            "password": "passer123",
+            "classe_id": 2,
+            "role": "etudiant"
+        },
+        {
+            "id": 2,
+            "matricule": "MAT002",
+            "nom": "amouda",
+            "prenom": "dDiop",
+            "login": "ac@gmail.com",
+            "password": "passer123",
+            "classe_id": 2,
+            "role": "ac"
+        },
+        {
+            "id": 2,
+            "matricule": "MAT002",
+            "nom": "touba",
+            "prenom": "hamid",
+            "login": "rp@gmail.com",
+            "password": "passer123",
+            "classe_id": 2,
+            "role": "rp"
+        }
+    ]
+}

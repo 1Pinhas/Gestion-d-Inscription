@@ -36,15 +36,6 @@
     color: white;
 }
 
-#footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-}
-
 #image-container {
     display: flex;
     justify-content: space-around;
@@ -90,10 +81,6 @@ legend{
     text-align: center;
 } 
 
-/* .container4, tableau, fieldset{
-    background-color: whitesmoke;
-} */
-
 .tableau, table{
     border-collapse: collapse;
     margin: 10px;
@@ -103,6 +90,7 @@ legend{
 table, th, td {
     border: 1px solid black;
     text-align: center;
+    height: auto;
 }
 
 th{
@@ -131,7 +119,11 @@ th, td {
     padding-left: 85%;
 }
 
-/* .eta{
-    margin-top: 10%;
-} */
-
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
